@@ -1,0 +1,142 @@
+/* Global Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #010023; /* Warna latar belakang lembut */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+}
+
+/* Container */
+.container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    transition: transform 0.3s ease-in-out;
+    text-align: center;
+}
+
+/* Hover effect on container */
+.container:hover {
+    transform: scale(1.05); /* Efek pembesaran */
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15); /* Menambah shadow saat hover */
+}
+
+/* Heading */
+h1 {
+    color: #010023;
+    font-size: 28px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+/* Input group styling */
+.input-group {
+    margin-bottom: 25px;
+}
+
+/* Input field */
+input[type="text"] {
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f8f9fa;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+/* Input focus effect */
+input[type="text"]:focus {
+    border-color: #010023;
+    outline: none;
+    background-color: #ffffff;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}
+
+/* Button */
+button {
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+    color: white;
+    background-color: #010023;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Button hover effect */
+button:hover {
+    color: #010023;
+    background-color: rgb(232, 232, 232);
+    transform: translateY(-3px); /* Efek angkat saat hover */
+}
+
+/* Button active effect */
+button:active {
+    background-color: black;
+    transform: translateY(1px); /* Efek tekan saat tombol diklik */
+}
+
+/* Result section */
+.result {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #333;
+}
+
+/* Error message styling */
+.result.error {
+    color: #e74c3c; /* Warna merah untuk kesalahan */
+    font-weight: 700;
+}
+
+/* Success message styling */
+.result.success {
+    color: #2ecc71; /* Warna hijau untuk sukses */
+    font-weight: 700;
+}
+
+/* Animated typing effect for result text */
+.result p {
+    animation: typing 2s steps(40) 1s forwards;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+/* Typing animation */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    input[type="text"], button {
+        font-size: 16px;
+    }
+}

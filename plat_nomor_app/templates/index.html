@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar kode plat nomor Indonesia</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Daftar Kode Plat Nomor Kendaraan Indonesia</h1>
+        <form method="POST">
+            <div class="input-group">
+                <label for="platNomor">Masukkan Plat Nomor:</label>
+                <input type="text" id="platNomor" name="plat_nomor" placeholder="Contoh: B atau AB" required>
+            </div>
+            <button type="submit">Cek Daerah</button>
+        </form>
+        {% if daerah %}
+        <div class="result">
+            <p>Plat nomor {{ request.form['plat_nomor'] }} berasal dari: {{ daerah }}</p>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
